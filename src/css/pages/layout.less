@@ -1,0 +1,106 @@
+// out: null
+
+/*===========================
+Layout
+
+1. Wrapper
+===========================*/
+.wrapper {
+	height: 100%;
+	width: 100%;
+	background-image: url('/images/Decor.png');
+	&:after {
+		content: "";
+		width: 205px;
+		height: 100%;
+		background: url("/images/Leaves-bg.png") repeat-y;		
+		top: 0px;
+		right: 0px;
+		transform: scale(-1, 1);
+		position: absolute;		
+	}
+	&:before {
+		content: "";
+		width: 205px;
+		height: 100%;
+		background: url("/images/Leaves-bg.png") repeat-y;
+			
+		top: 0px;
+		left: 0px;
+		position: absolute;			
+	}
+}
+
+
+/*===========================
+Table of Content
+
+1. Header
+===========================*/
+.top-header {
+	height: 130px;	
+}
+
+.top-header__logo {
+	padding: 2rem;	
+}
+
+.top-header__info {
+	padding-top: 4rem;
+	padding-left: 4rem;
+	h4 {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 20px;
+		font-style: italic;
+		color: #74a952;
+		margin-bottom: 1rem;
+	}
+	p {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 17px;
+		font-style: italic;
+		color: #656565;
+	}
+}
+
+.top-header__adress {
+	padding-top: 3.5rem;
+	padding-left: 5rem;
+	p {
+		font-family: 'Cuprum', sans-serif;
+		font-size: 20px;
+		font-style: normal;
+		color: #74a952;
+		margin-bottom: .5rem;
+	}
+}
+
+.top-header__contacts {
+	padding-top: 3.5rem;
+	ul {
+		li {
+			font-family: 'Cuprum', sans-serif;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: bold;
+			color: #74a952;
+			margin-bottom: .5rem;
+			span {
+				color: #747474;
+			}
+		}
+	}
+}
+
+
+
+/*===========================
+Table of Content
+
+1. Slider
+===========================*/
+
+
+
+/* 1. Slider
+===========================*/

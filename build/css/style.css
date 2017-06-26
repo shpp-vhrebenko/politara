@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&subset=cyrillic,cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800,800i&subset=cyrillic');
+.rel {
+  position: relative;
+}
+.text-bold {
+  font-weight: bold;
+}
+/* @import "@{bootstrap}variables";
+@import "@{bootstrap}mixins";
+@import "@{bootstrap}normalize";
+@import "@{bootstrap}scaffolding";
+@import "@{bootstrap}grid";
+@import "@{bootstrap}type";
+@import "@{bootstrap}forms";
+@import "@{bootstrap}navbar";
+@import "@{bootstrap}popovers";
+@import "@{bootstrap}dropdowns";
+@import "@{bootstrap}responsive-utilities";
+@import "@{bootstrap}utilities"; */
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  background: #fff;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+a:focus {
+  outline: none;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/* Vendor libs import
+==============================*/
+/* @import (less) "libs/font-awesome.css";
+@import (less) "libs/icons_1.css"; */
+/* font-family: 'Cuprum', sans-serif; */
+/* font-family: 'Open Sans', sans-serif; */
+/* Project Elements
+==============================*/
+/*===========================
+Table of Content
+
+1. Wrappers
+2. Buttons
+3. Form elements
+===========================*/
+/* 1. Wrappers
+===========================*/
+/* Pages import
+==============================*/
+/*===========================
+Layout
+
+1. Wrapper
+===========================*/
+.wrapper {
+  height: 100%;
+  width: 100%;
+  background-image: url('/images/Decor.png');
+}
+.wrapper:after {
+  content: "";
+  width: 205px;
+  height: 100%;
+  background: url("/images/Leaves-bg.png") repeat-y;
+  top: 0px;
+  right: 0px;
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+  position: absolute;
+}
+.wrapper:before {
+  content: "";
+  width: 205px;
+  height: 100%;
+  background: url("/images/Leaves-bg.png") repeat-y;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+/*===========================
+Table of Content
+
+1. Header
+===========================*/
+.top-header {
+  height: 130px;
+}
+.top-header__logo {
+  padding: 2rem;
+}
+.top-header__info {
+  padding-top: 4rem;
+  padding-left: 4rem;
+}
+.top-header__info h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  color: #74a952;
+  margin-bottom: 1rem;
+}
+.top-header__info p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  font-style: italic;
+  color: #656565;
+}
+.top-header__adress {
+  padding-top: 3.5rem;
+  padding-left: 5rem;
+}
+.top-header__adress p {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  color: #74a952;
+  margin-bottom: .5rem;
+}
+.top-header__contacts {
+  padding-top: 3.5rem;
+}
+.top-header__contacts ul li {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  color: #74a952;
+  margin-bottom: .5rem;
+}
+.top-header__contacts ul li span {
+  color: #747474;
+}
+/*===========================
+Table of Content
+
+1. Slider
+===========================*/
+/* 1. Slider
+===========================*/

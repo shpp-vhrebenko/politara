@@ -1,0 +1,12 @@
+/node_modules
+/bootstrap
+/database
+/storage
+/tests
+/vendor
+/public/uploads
+/public/dashboard/js/chosen
+/public/dashboard/js/dropzone
+/public/dashboard/js/tinymce
+/public/favicons-blackcoffee.com.ua.zip
+
