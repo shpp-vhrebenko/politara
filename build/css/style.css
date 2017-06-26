@@ -79,7 +79,7 @@ Layout
   width: 100%;
   background-image: url('/images/Decor.png');
 }
-.wrapper:after {
+.wrapper:before {
   content: "";
   width: 205px;
   height: 100%;
@@ -90,7 +90,11 @@ Layout
           transform: scale(-1, 1);
   position: absolute;
 }
-.wrapper:before {
+.wrapper .two_wrapper {
+  height: 100%;
+  width: 100%;
+}
+.wrapper .two_wrapper:before {
   content: "";
   width: 205px;
   height: 100%;
@@ -151,6 +155,32 @@ Table of Content
 }
 .top-header__contacts ul li span {
   color: #747474;
+}
+.navbar-default .navbar-collapse {
+  background-color: #B0D56B;
+}
+.navbar-collapse {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.navbar-nav li {
+  transition: all 0.2s ease-in-out;
+}
+.navbar-nav li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #73982E;
+}
+.navbar-nav li a {
+  padding: 15px 62px;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
 }
 /*===========================
 Table of Content
