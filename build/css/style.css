@@ -50,6 +50,12 @@ fieldset {
   margin: 0;
   padding: 0;
 }
+html {
+  position: relative;
+}
+body {
+  background-image: url('/images/Square_pattern.png');
+}
 /* Vendor libs import
 ==============================*/
 /* @import (less) "libs/font-awesome.css";
@@ -74,12 +80,26 @@ Layout
 
 1. Wrapper
 ===========================*/
-.wrapper {
+/* background-image: url('/images/Square_pattern.png');	 */
+.left_wrapper {
+  width: 100%;
+  height: 100%;
+}
+.left_wrapper:before {
+  content: "";
+  width: 205px;
+  height: 100%;
+  background: url("/images/Leaves-bg.png") repeat-y;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 10;
+}
+.left_wrapper .right-wrapper {
   height: 100%;
   width: 100%;
-  background-image: url('/images/Decor.png');
 }
-.wrapper:before {
+.left_wrapper .right-wrapper:before {
   content: "";
   width: 205px;
   height: 100%;
@@ -89,25 +109,26 @@ Layout
   -webkit-transform: scale(-1, 1);
           transform: scale(-1, 1);
   position: absolute;
-}
-.wrapper .two_wrapper {
-  height: 100%;
-  width: 100%;
-}
-.wrapper .two_wrapper:before {
-  content: "";
-  width: 205px;
-  height: 100%;
-  background: url("/images/Leaves-bg.png") repeat-y;
-  top: 0px;
-  left: 0px;
-  position: absolute;
+  z-index: 10;
 }
 /*===========================
 Table of Content
 
 1. Header
 ===========================*/
+.header {
+  height: 180px;
+  position: relative;
+  box-shadow: 0px 6px 12px -2px #aaca7c;
+  background-color: #ffffff;
+  z-index: 3;
+}
+.main-header {
+  background-image: url('/images/Decor.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 60% -12%;
+}
 .top-header {
   height: 130px;
 }
@@ -156,8 +177,109 @@ Table of Content
 .top-header__contacts ul li span {
   color: #747474;
 }
+.footer-header {
+  position: absolute;
+  bottom: -67px;
+}
 .navbar-default .navbar-collapse {
-  background-color: #B0D56B;
+  background-color: #6fa930;
+}
+.navbar-collapse.collapse {
+  height: 95px !important;
+}
+.navbar-collapse.collapse .navbar-nav {
+  height: 95px;
+}
+.navbar-default {
+  background-color: #6fa930;
+  border-color: #6fa930;
+  border-radius: 0px;
+}
+.navbar-nav li {
+  transition: all 0.2s ease-in-out;
+  height: 95px;
+}
+.navbar-nav li.navbar-nav__item a {
+  line-height: 95px;
+  cursor: pointer;
+  color: #eeffdd;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  padding: 0rem 2rem;
+  text-transform: uppercase;
+}
+.navbar-nav li.navbar-nav__item a:hover {
+  color: #eeffdd;
+}
+.navbar-nav li.navbar-nav__item a:active {
+  color: #eeffdd;
+}
+.navbar-nav li.navbar-nav__item a:focus {
+  color: #eeffdd;
+}
+.navbar-nav li.navbar-nav__item a:visited {
+  color: #eeffdd;
+}
+.navbar-nav li.navbar-nav__item:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  background-color: #77b433;
+  color: #eeffdd;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+}
+.navbar-nav li.navbar-nav__item-nav_localization {
+  background-color: #5f9921;
+  margin-left: .5rem;
+}
+.navbar-nav li.navbar-nav__item-nav_localization nav {
+  line-height: 95px;
+  padding: 0rem 4.8rem;
+}
+.navbar-nav li.navbar-nav__item-nav_localization nav a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #99dd44;
+}
+.navbar-nav li.navbar-nav__item-nav_localization nav a:hover {
+  text-decoration: underline;
+  color: #eeffdd;
+}
+.navbar-nav li.navbar-nav__item-nav_localization nav a:not(:last-child) {
+  margin-right: .5rem;
+}
+.navbar-nav li .dropdown-menu {
+  background-color: #99dd44;
+}
+.navbar-nav li .dropdown-menu li {
+  height: 62px;
+}
+.navbar-nav li .dropdown-menu li a {
+  line-height: 62px;
+}
+.navbar-nav li .dropdown-menu li a:hover {
+  background-color: #88cc11;
+}
+.navbar-nav li .dropdown-menu li a:active {
+  background-color: #88cc11;
+}
+.navbar-nav li .dropdown-menu li a:focus {
+  background-color: #88cc11;
+}
+.navbar-nav li .dropdown-menu li a:visited {
+  background-color: #88cc11;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+  color: #eeffdd;
+  background-color: #77b433;
 }
 .navbar-collapse {
   padding-right: 0px;
@@ -167,20 +289,147 @@ Table of Content
   padding-right: 0px;
   padding-left: 0px;
 }
-.navbar-nav li {
-  transition: all 0.2s ease-in-out;
+/*2.Footer
+===========================*/
+.footer {
+  height: 350px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
-.navbar-nav li:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  background-color: #73982E;
+.footer:before {
+  content: "";
+  width: 60%;
+  height: 290px;
+  background-image: linear-gradient(to left, #01273e, #225b7d);
+  background-repeat: no-repeat;
+  background-color: #1b4f6e;
+  top: 0px;
+  left: 40%;
+  position: absolute;
 }
-.navbar-nav li a {
-  padding: 15px 62px;
+.footer .footer__wrapper {
+  height: 290px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+.footer .footer__wrapper:before {
+  content: "";
+  width: 50%;
+  height: 290px;
+  background: url("/images/image_6.png") no-repeat;
+  top: 0px;
+  left: 37%;
+  position: absolute;
+}
+.footer .footer__wrapper .footer__content {
+  z-index: 2;
+  height: 290px;
+}
+.footer .footer__wrapper .footer__content .footer__contacts {
+  height: 290px;
+  padding-top: 4rem;
+  padding-left: 3rem;
+}
+.footer .footer__wrapper .footer__content .footer__contacts h3 {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 2rem;
+}
+.footer .footer__wrapper .footer__content .footer__contacts .adress {
+  margin-bottom: 1rem;
+}
+.footer .footer__wrapper .footer__content .footer__contacts .adress p {
+  margin-bottom: .2rem;
+  color: #225a7c;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 17px;
+}
+.footer .footer__wrapper .footer__content .footer__contacts .phone {
+  margin-bottom: 1rem;
+}
+.footer .footer__wrapper .footer__content .footer__contacts .phone p {
+  margin-bottom: .2rem;
+  color: #5f9921;
   font-family: 'Cuprum', sans-serif;
   font-size: 20px;
-  font-style: normal;
-  font-weight: bold;
+  text-transform: uppercase;
+}
+.footer .footer__wrapper .footer__content .footer__contacts .phone p span {
+  color: #555555;
+}
+.footer .footer__wrapper .footer__content .footer__contacts .email p {
+  color: #225a7c;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 17px;
+}
+.footer .footer__wrapper .footer__content .footer__menu-site {
+  height: 290px;
+  padding-top: 4rem;
+  padding-right: 3rem;
+}
+.footer .footer__wrapper .footer__content .footer__menu-site h3 {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #99dd44;
+  margin-bottom: 2rem;
+}
+.footer .footer__wrapper .footer__content .footer__menu-site ul li {
+  text-align: right;
+  margin-bottom: .6rem;
+}
+.footer .footer__wrapper .footer__content .footer__menu-site ul li a {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 17px;
+  color: #ffffff;
+}
+.footer .footer__wrapper .footer__content .footer__menu-site ul li a:hover {
+  text-decoration: none;
+  color: #99dd44;
+}
+.footer .footer__copyright {
+  height: 60px;
+  width: 100%;
+  background-color: #5f9921;
+}
+.footer .footer__copyright .copyright__content {
+  height: 100%;
+}
+.footer .footer__copyright .copyright__content .copyright {
+  line-height: 60px;
+  padding-left: 1.7rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+}
+.footer .footer__copyright .copyright__content .dvacom {
+  padding-right: 10rem;
+  line-height: 60px;
+  padding-left: 1.7rem;
+}
+.footer .footer__copyright .copyright__content .dvacom a {
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  position: relative;
+}
+.footer .footer__copyright .copyright__content .dvacom a:after {
+  content: "";
+  width: 100%;
+  height: 60px;
+  background: url("/images/DvaCom.png") no-repeat;
+  top: -10px;
+  right: -120px;
+  position: absolute;
+}
+.footer .footer__copyright .copyright__content .dvacom a:hover {
+  text-decoration: none;
 }
 /*===========================
 Table of Content
@@ -189,3 +438,12 @@ Table of Content
 ===========================*/
 /* 1. Slider
 ===========================*/
+.slider {
+  z-index: 2;
+  background-color: #8dba56;
+  height: 525px;
+}
+.slider .container {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}

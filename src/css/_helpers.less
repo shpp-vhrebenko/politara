@@ -13,3 +13,32 @@
 .text-bold {
     font-weight: bold;
 }
+
+.link-style-block(@color) {
+	&:hover {
+		background-color: @color;
+	}
+	&:active {
+		background-color: @color;
+	}
+	&:focus {
+		background-color: @color;
+	}
+	&:visited {
+		background-color: @color;
+	}
+}
+.link-style-text(@color) {
+	&:hover {
+		color: @color;
+	}
+	&:active {
+		color: @color;
+	}
+	&:focus {
+		color: @color;
+	}
+	&:visited {
+		color: @color;
+	}
+}
