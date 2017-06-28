@@ -457,6 +457,31 @@ Table of Content
 ===========================*/
 /* 1. Slider
 ===========================*/
+.bread_crumb {
+  height: 100px;
+}
+.bread_crumb .breadcrumb__content {
+  padding-top: 50px;
+}
+.bread_crumb .breadcrumb__content .breadcrumb {
+  height: 60px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  background-color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+.bread_crumb .breadcrumb__content .breadcrumb a {
+  color: #333333;
+  text-decoration: none;
+}
+.bread_crumb .breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #77b433;
+  content: "/\00a0";
+}
 .slider {
   z-index: 2;
   background-color: #8dba56;
@@ -786,4 +811,86 @@ Table of Content
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.left_wrapper {
+  background-color: #ffffff;
+}
+.footer {
+  background-color: #ffffff;
+}
+.aboutAs {
+  height: 880px;
+  position: relative;
+}
+.aboutAs__content {
+  height: 100%;
+  position: relative;
+}
+.aboutAs__img {
+  height: 650px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+}
+.aboutAs__img:after {
+  content: "";
+  width: 80px;
+  height: 40px;
+  position: absolute;
+  bottom: -40px;
+  right: 50px;
+  background-color: #99dd44;
+}
+.aboutAs__img:before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: -180px;
+  right: 330px;
+  background-color: #09334c;
+}
+.aboutAs__info {
+  width: 750px;
+  height: 410px;
+  background-color: #ffffff;
+  z-index: 2;
+  position: absolute;
+  bottom: 8rem;
+  left: 4rem;
+}
+.aboutAs__info .aboutAs__box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 3rem;
+}
+.aboutAs__info .aboutAs__box p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #414141;
+  text-align: left;
+  line-height: 1.6;
+}
+.aboutAs__info .aboutAs__box:after {
+  content: "";
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  border-left: 20px solid #99dd44;
+  border-bottom: 20px solid #99dd44;
+}
+.aboutAs__info .aboutAs__box:before {
+  content: "";
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  border-right: 20px solid #99dd44;
+  border-top: 20px solid #99dd44;
 }

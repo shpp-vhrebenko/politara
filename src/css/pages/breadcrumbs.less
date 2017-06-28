@@ -1,0 +1,25 @@
+.bread_crumb {
+    height: 100px;
+    .breadcrumb__content {
+        padding-top: 50px;
+        .breadcrumb {
+            height: 60px;
+            border-radius: 0px;
+            margin-bottom: 0px;
+            padding-top: 20px;
+            background-color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            color: #333333;
+            a {
+                color: #333333;
+                text-decoration: none;
+            }
+        }
+    }
+    .breadcrumb>li+li:before {
+        padding: 0 5px;
+        color: #77b433;
+        content: "/\00a0";
+    }
+}
