@@ -4,6 +4,7 @@
 	background-color: #ffffff;	
 	margin-top: 75px;
 	margin-bottom: 6rem;
+	.default_box-shadow;
 	h3 {
 		font-family: "Open Sans", sans-serif;
 		font-weight: bold;
@@ -28,43 +29,27 @@
 				background-size: cover;
 			}	
 			a {
+				display: inline-block;
 				font-family: "Open Sans", sans-serif;
 				font-weight: bold;
 				font-size: 26px;
 				text-align: center;
 				text-transform: uppercase;
 				color: #5f9921;		
-				text-decoration: none;		
-				&:before{
+				text-decoration: none;
+				margin-top: 1rem;
+				transition: all .2s ease-in-out;
+				&:hover:before{
 		           display: block;
 		           position: absolute;
 		           content: "";
 		           height: 3px;
 		           width: 95px;
 		           background-color: #5f9921;
-		           left: 14;
-		           bottom: -18px;
+		           left: 14px;
+		           bottom: -24px;
 		        }
 			}		
 		}		
-	}
-	.vacancy__item {
-		width: 100%;
-		height: auto;
-		padding: 2rem 4rem;		
-		text-align: left;
-		h5 {
-			font-family: "Open Sans", sans-serif;
-			font-weight: bold;
-			font-size: 16px;
-			color: #5f9921;
-			margin-bottom: 3rem;			
-		}
-		p {
-			font-family: "Open Sans", sans-serif;			
-			font-size: 16px;
-			color: #8c8c8c;
-			line-height: 2;
-		}
-	}
+	}	
 }

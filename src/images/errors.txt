@@ -1,0 +1,7 @@
+[Mon Jun 26 2017 15:08:58 GMT+0300 (Финляндия (лето))] Layer "Leaves-bg.png repeat y": Expected end of input but "r" found.
+[Mon Jun 26 2017 15:08:58 GMT+0300 (Финляндия (лето))] Layer "Leaves-bg.png repeat y copy": Expected end of input but "r" found.
+[Mon Jun 26 2017 15:08:58 GMT+0300 (Финляндия (лето))] Layer "+38  (044)  501-13-76": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Mon Jun 26 2017 15:08:58 GMT+0300 (Финляндия (лето))] Layer "+38  (044)  507-11-57": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Mon Jun 26 2017 15:08:58 GMT+0300 (Финляндия (лето))] Layer "+38  (044)  501-13-76": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Mon Jun 26 2017 15:08:58 GMT+0300 (Финляндия (лето))] Layer "+38  (044)  507-11-57": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Mon Jun 26 2017 15:08:58 GMT+0300 (Финляндия (лето))] Layer "politara@gmail.com": Unsupported extension: com
