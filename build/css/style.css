@@ -801,7 +801,31 @@ Table of Content
 .footer {
   background-color: #f7f5f3;
 }
-/* @import "pages/breadcrumbs.less"; */
+.bread_crumb {
+  height: 100px;
+}
+.bread_crumb .breadcrumb__content {
+  padding-top: 50px;
+}
+.bread_crumb .breadcrumb__content .breadcrumb {
+  height: 60px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  background-color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+.bread_crumb .breadcrumb__content .breadcrumb a {
+  color: #333333;
+  text-decoration: none;
+}
+.bread_crumb .breadcrumb__content .breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #77b433;
+  content: "/\00a0";
+}
 .aboutAs {
   height: 880px;
   position: relative;
@@ -903,6 +927,7 @@ Table of Content
   background-color: #ffffff;
   margin-top: 75px;
   margin-bottom: 6rem;
+  box-shadow: 0px 0px 15px 1px #999999;
 }
 .vacancy__content h3 {
   font-family: "Open Sans", sans-serif;
@@ -931,12 +956,24 @@ Table of Content
   color: #8c8c8c;
   line-height: 2;
 }
+.vacancy__content .pagination {
+  display: inline-block;
+  margin: 0 auto;
+}
 .certificates__content {
   width: 100%;
   min-height: 500px;
   background-color: #ffffff;
   margin-top: 75px;
   margin-bottom: 6rem;
+}
+.certificates__content h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #5f9921;
 }
 .certificates__content .sertificates__info {
   padding: 2rem 4rem;
@@ -947,20 +984,13 @@ Table of Content
   color: #333333;
   line-height: 2;
 }
-.certificates__content .sertificates__info h4 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #5f9921;
-}
 .productsDescription__content {
   width: 100%;
   min-height: 500px;
   background-color: #ffffff;
   margin-top: 75px;
   margin-bottom: 6rem;
+  box-shadow: 0px 0px 15px 1px #999999;
 }
 .productsDescription__content h3 {
   font-family: "Open Sans", sans-serif;
@@ -1045,6 +1075,7 @@ Table of Content
   background-color: #ffffff;
   margin-top: 75px;
   margin-bottom: 6rem;
+  box-shadow: 0px 0px 15px 1px #999999;
 }
 .activies__content .activies__info {
   padding: 2rem 4rem;
