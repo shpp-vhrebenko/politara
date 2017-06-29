@@ -1350,3 +1350,21 @@ Table of Content
   color: #333333;
   padding: 2rem 4rem;
 }
+.abort-404__content {
+  width: 100%;
+  min-height: 600px;
+  background-color: #ffffff;
+  margin-top: 75px;
+  margin-bottom: 6rem;
+  padding: 6rem 6rem;
+}
+.abort-404__content h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #8C5114;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
