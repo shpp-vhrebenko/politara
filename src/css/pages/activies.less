@@ -6,22 +6,45 @@
 	min-height: 600px;
 	background-color: #ffffff;	
 	margin-top: 75px;
-	margin-bottom: 6rem;
-	h3 {
-		font-family: "Open Sans", sans-serif;
-		font-weight: bold;
-		font-size: 26px;
-		text-align: center;
-		text-transform: uppercase;
-		color: #5f9921;
-	}
+	margin-bottom: 6rem;	
 	.activies__info {
-		padding: 2rem 4rem;
+		padding: 2rem 4rem;		
+		h1,h2,h3,h4,h5 {
+			text-align: left;
+			font-family: "Open Sans", sans-serif;
+			font-weight: bold;
+			font-size: 16px;			
+			text-transform: uppercase;
+			color: #5f9921;
+			margin-bottom: 1rem;
+		}
+		h5.stage {
+			text-align: left;
+			font-family: "Open Sans", sans-serif;
+			font-weight: bold;
+			font-size: 16px;			
+			text-transform: uppercase;
+			color: #333333;
+			margin-bottom: 1rem;
+			position: relative;
+			padding-left: 2rem;
+			&:before {
+				content: "";
+				width: 6px;
+				height: 6px;
+				background-color: #5f9921;
+				position: absolute;
+				top: 6px;
+				left: 0px;
+			}
+		}
 		p {
+			text-align: left;
 			font-family: "Open Sans", sans-serif;			
 			font-size: 16px;
 			color: #333333;
 			line-height: 2;
+			margin-bottom: 1rem;
 		}	
 	}
 	

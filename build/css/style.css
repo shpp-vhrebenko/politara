@@ -129,7 +129,7 @@ Table of Content
 .header {
   height: 180px;
   position: relative;
-  box-shadow: 0px 5px 7px 0px rgba(50, 50, 50, 0.64);
+  box-shadow: 0px 0px 15px 1px #999999;
   background-color: #ffffff;
   z-index: 3;
 }
@@ -298,6 +298,22 @@ Table of Content
 .container-fluid {
   padding-right: 0px;
   padding-left: 0px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+@media (min-width: 979px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+  }
+  ul.dropdown-menu li.dropdown-submenu:hover > ul.dropdown-menu {
+    display: block;
+  }
 }
 /*2.Content
 ===========================*/
@@ -560,15 +576,8 @@ Table of Content
 .products .products__item_info {
   height: 290px;
   padding: 6rem 4rem;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#225b7d+43,022941+99 */
-  background: #225b7d;
-  /* Old browsers: ; */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to top right, #225b7d 43%, #022941 99%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#225b7d', endColorstr='#022941', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
+  background-color: #01273e;
+  background-image: linear-gradient(-135deg, #01273e, #225b7d);
 }
 .products .products__item_info h3 {
   font-family: 'Roboto Slab', serif;
@@ -943,14 +952,14 @@ Table of Content
   text-transform: uppercase;
   color: #5f9921;
 }
-.products__content {
+.productsDescription__content {
   width: 100%;
   min-height: 500px;
   background-color: #ffffff;
   margin-top: 75px;
   margin-bottom: 6rem;
 }
-.products__content h3 {
+.productsDescription__content h3 {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 26px;
@@ -958,36 +967,36 @@ Table of Content
   text-transform: uppercase;
   color: #5f9921;
 }
-.products__content .products__info {
+.productsDescription__content .products__info {
   padding: 2rem 4rem;
 }
-.products__content .products__info p {
+.productsDescription__content .products__info p {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #333333;
   line-height: 2;
 }
-.products__content .products__items {
+.productsDescription__content .products__items {
   padding: 2rem 2rem;
 }
-.products__content .products__items .products__item {
+.productsDescription__content .products__items .products__item {
   height: 500px;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
 }
-.products__content .products__items .products__item .item__img {
+.productsDescription__content .products__items .products__item .item__img {
   height: 250px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.products__content .products__items .products__item .item__info {
+.productsDescription__content .products__items .products__item .item__info {
   height: 250px;
   padding: 4rem 2rem;
   background-color: #01273e;
   background-image: linear-gradient(-135deg, #01273e, #225b7d);
 }
-.products__content .products__items .products__item .item__info h4 {
+.productsDescription__content .products__items .products__item .item__info h4 {
   font-family: 'Roboto Slab', serif;
   font-size: 24px;
   font-weight: bold;
@@ -997,7 +1006,7 @@ Table of Content
   position: relative;
   margin-bottom: 3rem;
 }
-.products__content .products__items .products__item .item__info h4:before {
+.productsDescription__content .products__items .products__item .item__info h4:before {
   display: block;
   position: absolute;
   content: "";
@@ -1007,18 +1016,18 @@ Table of Content
   left: 0;
   bottom: -18px;
 }
-.products__content .products__items .products__item .item__info ul {
+.productsDescription__content .products__items .products__item .item__info ul {
   list-style-type: none;
   padding-left: 1rem;
 }
-.products__content .products__items .products__item .item__info ul li {
+.productsDescription__content .products__items .products__item .item__info ul li {
   font-family: 'Open Sans', serif;
   font-size: 16px;
   color: #c4d6e7;
   position: relative;
   margin-bottom: 1rem;
 }
-.products__content .products__items .products__item .item__info ul li:before {
+.productsDescription__content .products__items .products__item .item__info ul li:before {
   position: absolute;
   content: "";
   height: 6px;
@@ -1034,20 +1043,205 @@ Table of Content
   margin-top: 75px;
   margin-bottom: 6rem;
 }
-.activies__content h3 {
+.activies__content .activies__info {
+  padding: 2rem 4rem;
+}
+.activies__content .activies__info h1,
+.activies__content .activies__info h2,
+.activies__content .activies__info h3,
+.activies__content .activies__info h4,
+.activies__content .activies__info h5 {
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #5f9921;
+  margin-bottom: 1rem;
+}
+.activies__content .activies__info h5.stage {
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+.activies__content .activies__info h5.stage:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #5f9921;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+}
+.activies__content .activies__info p {
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #333333;
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+.contacts__content {
+  width: 100%;
+  min-height: 500px;
+  background-color: #ffffff;
+  margin-top: 75px;
+  margin-bottom: 6rem;
+  box-shadow: 0px 0px 15px 1px #999999;
+}
+.contacts__content h3 {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 26px;
   text-align: center;
   text-transform: uppercase;
   color: #5f9921;
+  margin-bottom: 2rem;
 }
-.activies__content .activies__info {
-  padding: 2rem 4rem;
+.contacts__content .contacts__company {
+  width: 100%;
+  min-height: 160px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
-.activies__content .activies__info p {
+.contacts__content .contacts__company .company__item {
+  min-height: 100px;
+  padding: 1rem 3rem;
+}
+.contacts__content .contacts__company .company__item h1,
+.contacts__content .contacts__company .company__item h2,
+.contacts__content .contacts__company .company__item h3,
+.contacts__content .contacts__company .company__item h4,
+.contacts__content .contacts__company .company__item h5 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6fa930;
+  margin-bottom: 2rem;
+}
+.contacts__content .contacts__company .company__item p {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #333333;
-  line-height: 2;
+}
+.contacts__content .contacts__company .company__item a {
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+.contacts__content .contacts__staff {
+  width: 100%;
+  min-height: 420px;
+  background-color: #f7f7f7;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding: 4rem 0rem;
+}
+.contacts__content .contacts__staff .staff__item {
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  padding: 1rem 14rem;
+}
+.contacts__content .contacts__staff .staff__item .position {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  color: #5f9921;
+  margin-bottom: 1rem;
+}
+.contacts__content .contacts__staff .staff__item .name {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+.contacts__content .contacts__staff .staff__item .phone,
+.contacts__content .contacts__staff .staff__item .adress {
+  margin-bottom: .5rem;
+}
+.contacts__content .contacts__form {
+  width: 100%;
+  min-height: 530px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 4rem;
+}
+.contacts__content .contacts__form .form-request {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  right: 6rem;
+}
+.contacts__content .contacts__form .form-request label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+.contacts__content .contacts__form .form-request input {
+  border-color: #6fa930;
+  border-radius: 0px;
+  height: 40px;
+}
+.contacts__content .contacts__form .form-request textarea {
+  border-color: #6fa930;
+  border-radius: 0px;
+}
+.contacts__content .contacts__form .form-request input:placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+.contacts__content .contacts__form .btn-sample {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #6FA930;
+  border-color: #6FA930;
+  border-radius: 0px;
+  height: 50px;
+  position: relative;
+  right: -6rem;
+}
+.contacts__content .contacts__form .btn-sample:hover,
+.contacts__content .contacts__form .btn-sample:focus,
+.contacts__content .contacts__form .btn-sample:active,
+.contacts__content .contacts__form .btn-sample.active,
+.contacts__content .contacts__form .open .dropdown-toggle.btn-sample {
+  color: #ffffff;
+  background-color: #79C22B;
+  border-color: #6FA930;
+}
+.contacts__content .contacts__form .btn-sample:active,
+.contacts__content .contacts__form .btn-sample.active,
+.contacts__content .contacts__form .open .dropdown-toggle.btn-sample {
+  background-image: none;
+}
+.contacts__content .contacts__form .btn-sample.disabled,
+.contacts__content .contacts__form .btn-sample[disabled],
+.contacts__content .contacts__form fieldset[disabled] .btn-sample,
+.contacts__content .contacts__form .btn-sample.disabled:hover,
+.contacts__content .contacts__form .btn-sample[disabled]:hover,
+.contacts__content .contacts__form fieldset[disabled] .btn-sample:hover,
+.contacts__content .contacts__form .btn-sample.disabled:focus,
+.contacts__content .contacts__form .btn-sample[disabled]:focus,
+.contacts__content .contacts__form fieldset[disabled] .btn-sample:focus,
+.contacts__content .contacts__form .btn-sample.disabled:active,
+.contacts__content .contacts__form .btn-sample[disabled]:active,
+.contacts__content .contacts__form fieldset[disabled] .btn-sample:active,
+.contacts__content .contacts__form .btn-sample.disabled.active,
+.contacts__content .contacts__form .btn-sample[disabled].active,
+.contacts__content .contacts__form fieldset[disabled] .btn-sample.active {
+  background-color: #6FA930;
+  border-color: #6FA930;
+}
+.contacts__content .contacts__form .btn-sample .badge {
+  color: #6FA930;
+  background-color: #ffffff;
 }
