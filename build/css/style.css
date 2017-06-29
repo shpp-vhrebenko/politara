@@ -1261,25 +1261,6 @@ Table of Content
   color: #5f9921;
   margin-bottom: 2rem;
 }
-.category-product__content a {
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-  font-size: 26px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #5f9921;
-  text-decoration: none;
-}
-.category-product__content a:before {
-  display: block;
-  position: absolute;
-  content: "";
-  height: 3px;
-  width: 95px;
-  background-color: #5f9921;
-  left: 14;
-  bottom: -18px;
-}
 .category-product__content .category-product__subcategory {
   margin-left: 0px;
   margin-right: 0px;
@@ -1295,6 +1276,25 @@ Table of Content
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.category-product__content .category-product__subcategory .subcategory__item a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #5f9921;
+  text-decoration: none;
+}
+.category-product__content .category-product__subcategory .subcategory__item a:before {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 95px;
+  background-color: #5f9921;
+  left: 14;
+  bottom: -18px;
 }
 .category-product__content .vacancy__item {
   width: 100%;
