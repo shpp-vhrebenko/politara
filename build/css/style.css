@@ -1220,13 +1220,26 @@ Table of Content
   .brands .brands__content {
     height: 160px;
   }
+  .products .products__item_info h3 {
+    font-size: 30px;
+  }
+  .products .products__item_info h3:before {
+    width: 120px;
+    bottom: -25px;
+  }
   .products .products__item_info a {
     display: block;
     margin: 0 auto;
     text-align: center;
     width: 80%;
-    height: 40px;
-    margin-top: 10rem;
+    height: 70px;
+    margin-top: 8rem;
+    font-size: 24px;
+    padding: 1.7rem;
+  }
+  .products .products__item_info p {
+    font-size: 20px;
+    margin-top: 2rem;
   }
 }
 @media only screen and (max-width: 768px) and (min-width: 640px) {
@@ -1235,6 +1248,11 @@ Table of Content
   }
   .products .container .products__content {
     top: -40px;
+  }
+}
+@media (min-width: 992px) {
+  .products .products__item_info {
+    padding: 3rem 4rem;
   }
 }
 @media only screen and (max-width: 992px) and (min-width: 768px) {
