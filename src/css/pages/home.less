@@ -91,17 +91,19 @@
     }
 }
 .products {
-    height: 535px;  
+    height: auto;  
     position: relative;
-    z-index: 2;
+    z-index: 2;    
     .container {
-        height: 535px;
+        height: auto;
         .products__content {
-            height: 580px;
-            width: 1170px;
+            height: 580px;           
             z-index: 3;
-            position: absolute;
+            position: relative;
             top: -45px;
+            margin-left: 0px;
+            margin-right: 0px;
+            .default_box-shadow;
         }
     }  
     .products__item-asc {
@@ -161,20 +163,28 @@
             &:hover {
                 -webkit-transform: scale(1.1);
                 transform: scale(1.1);
+                color: #99dd44;
+                border: 1px solid #99dd44; 
             }
         }
     }
     .products__item_img {
-        height: 290px;
-        width: 100%;
+        height: 290px;    
+        position: relative;   
        /*  background-repeat:no-repeat;
        background-size:contain;
        background-position:center; */
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        &:hover .overlay {
+            height: 290px;
+            opacity: .5;
+        }   
     }
 }
+
+
 .brands {
     height: 295px;
     .brands__content {
@@ -182,7 +192,7 @@
     }
     .brands__item {
         width: 20%;
-        height: 295px;
+        height: 250px;
         float:left;
         position: relative;
         /* background-repeat:no-repeat;
@@ -332,4 +342,136 @@
             background-position:center;
         }
     }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 640px) {    
+    .products .container .products__content {        
+        top: 40px;      
+    }       
+        
+}
+
+@media only screen and (max-width: 768px) {
+    .sertificats {
+        display: none;
+    }   
+    .brands__item:nth-child(4) {
+        display: none
+    }
+    .brands .brands__item {
+        width: 30%;
+        height: 200px;
+        border: 5px solid transparent;
+        img {
+            width: 100%;
+        }            
+    }
+    .brands {
+        height: auto;
+    }  
+    .brands .brands__content {
+        height: 160px;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 640px) {     
+    .products {
+        .container {        
+           .products__content {
+                height: auto;       
+            }  
+        }
+    }
+    .products .container .products__content {        
+        top: -40px;      
+    }  
+          
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+    .brands .brands__item {
+        width: 25%;
+        height: 180px;       
+    }
+    .brands {
+        height: 240px;
+    }  
+    .brands .brands__content {
+        height: 240px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .sertificats .sertificats__info p {
+        position: relative;
+        font-size: 18px;
+        width: 400px;
+        right: 4rem;
+    }
+    .sertificats .sertificats__info {       
+        padding-top: 4rem;
+        padding-left: 1rem;  
+        height: 350px;
+        &:before {
+            height: 350px;
+        }    
+    }
+    .sertificats .sertificats__info h5 {
+        position: relative;
+        font-size: 24px;
+        right: 2rem;
+        margin-bottom: 3rem;
+    }
+    .sertificats .sertificats__img__wrapper_1 .sertificats__img_1 {
+        height: 250px;
+    }
+    .sertificats .sertificats__img__wrapper_2 .sertificats__img_2 {
+        height: 250px;
+    }
+
+    .sertificats .sertificats__img__wrapper_1:after {
+        bottom: 20px;
+    }
+
+    .sertificats .sertificats__info .sertificate__logo {        
+        bottom: -60px;        
+    }
+
+    .products .products__item_info {
+        height: 330px;
+    }    
+    .brands__item:nth-child(5) {
+        display: none
+    }  
+    .slider .carousel-control.right {
+        margin-right: 20px;
+    }
+    .slider .carousel-control.left {
+        margin-left: 20px;
+    } 
+    .products .products__item_info {        
+        padding: 3rem 4rem;        
+    }
+    .products .products__item_info p {       
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .sertificats .sertificats__info {       
+        padding-top: 4rem;
+        padding-left: 0rem;            
+    }
+     .slider .carousel-control.right {
+        margin-right: 80px;
+    }
+    .slider .carousel-control.left {
+        margin-left: 80px;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+   
 }
