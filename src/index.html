@@ -49,79 +49,83 @@
 			<section class="header">
 				<div class="container main-header">
 						<div class="top-header row">
-							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 top-header__logo">
+							<div class="col-xs-5 col-sm-3 col-md-2 col-lg-2 top-header__logo">
 								<a href="#">
 									<img src="/images/Logo.png" alt="site logo">
 								</a>              
 							</div>
-							<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 top-header__info">
+							<div class="hidden-xs hidden-sm col-md-5 col-lg-5 top-header__info">
 								<h4>Надежная упаковка Вашего успеха</h4>
 								<p>Производство и реализация бумажной упаковки</p>
 							</div>
-							<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 top-header__adress">
+							<div class="hidden-xs col-sm-4 col-md-3 col-lg-3 top-header__adress">
 								<p>ул.Березнева, 10, оф.</p>
 								<p>Киев, 02160, Украина</p>
 							</div>
-							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 top-header__contacts">
+							<div class="col-xs-5 col-sm-5 col-md-2 col-lg-2 top-header__contacts">
 								<ul>
 									<li>+38  <span>(044)</span>  501-13-76</li>
 									<li>+38  <span>(044)</span>  507-11-57</li>
 								</ul>
 							</div>          
 						</div><!-- /top_header -->
-						<!-- Static navbar -->        
-						<nav class="navbar navbar-default footer-header">
-							<div class="container-fluid">
+						<div class="footer-header">
+							<nav class="navbar navbar-default">
 								<div class="navbar-header">
-									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-										<span class="sr-only">Toggle navigation</span>
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 										<span class="icon-bar"></span>
 										<span class="icon-bar"></span>
 										<span class="icon-bar"></span>
 									</button>
-									<!-- <a class="navbar-brand" href="#">Project name</a> -->
+                                    <nav class="nav_localization">
+                                    	<a href="#">UA</a>
+                                    	<a href="#">RU</a>
+                                    	<a href="#">EN</a>
+                                    </nav>                                  
 								</div>
 								<div id="navbar" class="navbar-collapse collapse">
-									<ul class="nav navbar-nav">
-										<li class="navbar-nav__item"><a href="#">О компании</a></li>
-										<li class="navbar-nav__item"><a href="#">Виды деятельности</a></li>                 
-										<li class="dropdown navbar-nav__item" >
-											<a href="/product" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Продукция</a>
-											<ul class="dropdown-menu">
-												<li class="dropdown-submenu">
-													<a href="#" class="submenu-toggle">Бумажные мешки</a>
-													<ul class="dropdown-menu">
-														<li><a href="#">Для цемента</a></li>
-														<li><a href="#">Для сухих строительных смесей</a></li>
-														<li><a href="#">Для других сыпучих материалов</a></li>                     
-													</ul>
-												</li>
-
-												<li class="dropdown-submenu">
-													<a href="#" class="submenu-toggle">Бумажыне пакеты</a>
-													<ul class="dropdown-menu">
-														<li><a href="#">Для муки</a></li>
-														<li><a href="#">Для угля</a></li>
-														<li><a href="#">Для других сыпучих материалов</a></li>                     
-													</ul>
-												</li>
-												<li><a href="#">Клей</a></li>                     
-											</ul>
-										</li>
-										<li class="navbar-nav__item"><a href="#">Сертификаты</a></li>
-										<li class="navbar-nav__item"><a href="#">Вакансии</a></li>
-										<li class="navbar-nav__item"><a href="#">Контакты</a></li>
-										<li class="navbar-nav__item-nav_localization">
-											<nav>
-												<a href="#">UA</a>
-												<a href="#">RU</a>
-												<a href="#">EN</a>
-											</nav>
-										</li>
-									</ul>               
-							</div><!--/.nav-collapse -->
-							</div><!--/.container-fluid -->
-						</nav>
+	                                <ul class="nav navbar-nav">
+	                                    <li class="navbar-nav__item"><a href="#">О компании</a></li>
+	                                    <li class="navbar-nav__item"><a href="#">Виды деятельности</a></li>                 
+	                                    <li class="dropdown navbar-nav__item" >
+	                                        <a href="/product" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Продукция</a>
+	                                        <ul class="dropdown-menu">
+	                                            <li class="dropdown-submenu">
+	                                                <a href="#" class="submenu-toggle">Бумажные мешки</a>
+	                                                <ul class="dropdown-menu">
+	                                                    <li><a href="#">Для цемента</a></li>
+	                                                    <li><a href="#">Для сухих строительных смесей</a></li>
+	                                                    <li><a href="#">Для других сыпучих материалов</a></li>                     
+	                                                </ul>
+	                                            </li>
+	                                            <li class="dropdown-submenu">
+	                                                <a href="#" class="submenu-toggle">Бумажыне пакеты</a>
+	                                                <ul class="dropdown-menu">
+	                                                    <li><a href="#">Для муки</a></li>
+	                                                    <li><a href="#">Для угля</a></li>
+	                                                    <li><a href="#">Для других сыпучих материалов</a></li>                     
+	                                                </ul>
+	                                            </li>
+	                                            <li><a href="#">Клей</a></li>                     
+	                                        </ul>
+	                                    </li>
+	                                    <li class="navbar-nav__item"><a href="#">Сертификаты</a></li>
+	                                    <li class="navbar-nav__item"><a href="#">Вакансии</a></li>
+	                                    <li class="navbar-nav__item"><a href="#">Контакты</a></li>
+	                                    <li class="navbar-nav__item-nav_localization">
+	                                        <nav>
+	                                            <a href="#">UA</a>
+	                                            <a href="#">RU</a>
+	                                            <a href="#">EN</a>
+	                                        </nav>
+	                                    </li>
+	                                </ul>               
+	                            </div><!--/.nav-collapse -->
+							</nav>
+						</div> 
+						
+						
+						
 				</div> <!-- /container -->
 			</section>
 			<section class="content">			
@@ -143,7 +147,7 @@
 	<div class="footer__wrapper">
 		<footer class="container footer__content">
 			<div class="row">
-				<div class="footer__contacts col-sm-6 col-md-6">
+				<div class="footer__contacts col-xs-12 col-sm-6 col-md-6">
 					<h3>Наши контакты</h3>
 					<div class="adress">
 						<p>ул. Березнева, 10, оф</p>
