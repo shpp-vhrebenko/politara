@@ -14,6 +14,7 @@ var path = {
         html: 'build/',
         js: 'build/js/',
         css: 'build/css/',
+        media_css: 'build/css/media/',
         img: 'build/i/',
         fonts: 'build/css/fonts/'
     },
@@ -22,12 +23,14 @@ var path = {
         js: 'src/js/*.js',
         css: 'src/css/style.less',
         img: 'src/i/**/*.*',
-        fonts: 'src/css/fonts/**/*.*'
+        fonts: 'src/css/fonts/**/*.*',
+        media_css: 'src/css/media.less'
     },
     watch: { // За изменениями каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         css: 'src/css/**/*.less',
+        media_css: 'src/css/media.less',
         img: 'src/i/**/*.*',
         fonts: 'src/css/fonts/**/*.*'
     },
@@ -51,6 +54,14 @@ gulp.task('js:build', function () {
 
 
 gulp.task('css:build', function () {
+    gulp.src(path.src.media_css) // Выберем наш style.less
+        .pipe(less()) // Скомпилируем
+        .pipe(prefixer()) // Добавим вендорные префиксы
+        /*.pipe(cssnano({zindex: false})) */// Сожмем
+        .pipe(gulp.dest(path.build.media_css)); // Переместим в build
+});
+
+gulp.task('css:mediaBuild', function () {
     gulp.src(path.src.css) // Выберем наш style.less
         .pipe(less()) // Скомпилируем
         .pipe(prefixer()) // Добавим вендорные префиксы
@@ -85,6 +96,7 @@ gulp.task('build', [
     'html:build',
     'js:build',
     'css:build',
+    'css:mediaBuild',
     'fonts:build',
     'image:build'
 ]);
@@ -96,6 +108,9 @@ gulp.task('watch', function() {
     });
     watch([path.watch.css], function(event, cb) {
         gulp.start('css:build');
+    });
+    watch([path.watch.media_css], function(event, cb) {
+        gulp.start('css:mediaBuild');
     });
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:build');
